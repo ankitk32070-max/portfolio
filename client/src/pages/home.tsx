@@ -10,14 +10,14 @@ import Footer from '@/components/portfolio/Footer';
 
 // todo: remove mock functionality - replace with actual user data
 const portfolioData = {
-  name: 'Alex Chen',
+  name: 'Ankit kumar',
   title: 'Creative Developer',
   tagline: 'I build immersive digital experiences that push the boundaries of web technology. Specializing in 3D web, interactive animations, and cutting-edge frontend development.',
   socialLinks: {
     github: 'https://github.com',
     linkedin: 'https://linkedin.com',
     twitter: 'https://twitter.com',
-    email: 'hello@alexchen.dev',
+    email: 'hello@ankitkumar.dev',
   },
 };
 
