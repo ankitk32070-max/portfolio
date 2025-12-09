@@ -13,35 +13,33 @@ interface Education {
   courses?: string[];
 }
 
-// todo: remove mock functionality
+// pulled from resume
 const educations: Education[] = [
   {
-    id: '1',
-    institution: 'Stanford University',
-    degree: 'Master of Science',
-    field: 'Computer Science',
-    duration: '2017 - 2019',
-    gpa: '3.9/4.0',
-    achievements: [
-      'Graduated with Honors',
-      'Research Assistant in AI/ML Lab',
-      'Published 2 papers in peer-reviewed journals',
-    ],
-    courses: ['Machine Learning', 'Distributed Systems', 'Advanced Algorithms'],
+    id: '10',
+    institution: 'Gyan Niketan Res School, Barbigha',
+    degree: '10th Grade',
+    field: '',
+    duration: 'Completed 2021',
+    gpa: '57.6%',
+    achievements: [],
   },
   {
-    id: '2',
-    institution: 'University of California, Berkeley',
-    degree: 'Bachelor of Science',
-    field: 'Computer Science & Mathematics',
-    duration: '2013 - 2017',
-    gpa: '3.8/4.0',
-    achievements: [
-      'Dean\'s List all semesters',
-      'President of Computer Science Club',
-      'Won 3 hackathons',
-    ],
-    courses: ['Data Structures', 'Operating Systems', 'Database Systems'],
+    id: '12',
+    institution: '+2 K.H.B. High School, Keshavpur Jhajha',
+    degree: '12th Grade',
+    field: '',
+    duration: 'Completed 2023',
+    gpa: '68.2%',
+    achievements: [],
+  },
+  {
+    id: 'bca',
+    institution: 'Pursuing BCA',
+    degree: 'Bachelor of Computer Applications (Final Year)',
+    field: 'Computer Applications',
+    duration: 'Ongoing',
+    achievements: [],
   },
 ];
 
@@ -55,10 +53,10 @@ interface Certification {
 
 // todo: remove mock functionality
 const certifications: Certification[] = [
-  { id: '1', name: 'AWS Solutions Architect Professional', issuer: 'Amazon Web Services', date: '2023', credentialId: 'AWS-SAP-123456' },
-  { id: '2', name: 'Google Cloud Professional Developer', issuer: 'Google', date: '2022', credentialId: 'GCP-PD-789012' },
-  { id: '3', name: 'Kubernetes Administrator (CKA)', issuer: 'CNCF', date: '2022', credentialId: 'CKA-345678' },
-  { id: '4', name: 'MongoDB Developer Certification', issuer: 'MongoDB University', date: '2021' },
+  { id: 'c1', name: 'HTML', issuer: 'IIT Bombay', date: '' },
+  { id: 'c2', name: 'LibreOffice', issuer: 'IIT Bombay', date: '' },
+  { id: 'c3', name: 'C', issuer: 'IIT Bombay', date: '' },
+  { id: 'c4', name: 'JavaScript', issuer: 'IIT Bombay', date: '' },
 ];
 
 interface EducationCardProps {

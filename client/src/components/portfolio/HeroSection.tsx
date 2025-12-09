@@ -14,13 +14,18 @@ interface HeroSectionProps {
   };
 }
 
-const roles = ['Full Stack Developer', 'UI/UX Enthusiast', 'Creative Technologist', 'Problem Solver'];
+const roles = ['Final-year BCA Student', 'Aspiring Software Developer', 'Python & C Programmer', 'Quick Learner'];
 
 export default function HeroSection({
-  name = 'John Doe',
-  title = 'Creative Developer',
-  tagline = 'I build immersive digital experiences that push the boundaries of web technology.',
-  socialLinks = {},
+  name = 'Ankit Kumar',
+  title = 'Final-year BCA Student',
+  tagline = 'Final-year BCA student with a solid foundation in Python, C, and SQL. Seeking internships or entry-level roles in software development; eager to learn and contribute.',
+  socialLinks = {
+    github: 'https://github.com/Ankitkr2801',
+    linkedin: 'https://www.linkedin.com/in/ankit-kumar-098a57323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    twitter: '',
+    email: 'ankitkumar857993@gmail.com',
+  },
 }: HeroSectionProps) {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
@@ -68,6 +73,11 @@ export default function HeroSection({
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background pointer-events-none" />
       
       <div className="relative z-10 text-center max-w-4xl mx-auto">
+        <img
+          src="/images/profile.jpg"
+          alt={`${name} profile`}
+          className="mx-auto w-36 h-36 rounded-full object-cover mb-6 border-4 border-neon-purple/20"
+        />
         <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neon-purple/30 bg-neon-purple/10 backdrop-blur-sm">
           <span className="w-2 h-2 rounded-full bg-neon-green animate-pulse" />
           <span className="text-sm text-neon-purple font-medium">Available for opportunities</span>

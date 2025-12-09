@@ -1,8 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { 
-  SiReact, SiTypescript, SiNextdotjs, SiTailwindcss, SiNodedotjs, 
-  SiPython, SiPostgresql, SiMongodb, SiDocker, SiGit, SiAmazon, SiFigma,
-  SiJavascript, SiVuedotjs, SiGraphql, SiRedis
+  SiPython, SiPostgresql, SiGit, SiFigma, SiJavascript, SiVuedotjs, SiGraphql, SiRedis,
+  SiHtml5, SiC
 } from 'react-icons/si';
 
 interface Skill {
@@ -14,22 +13,11 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  { name: 'React', icon: SiReact, level: 95, color: '#61DAFB', category: 'frontend' },
-  { name: 'TypeScript', icon: SiTypescript, level: 90, color: '#3178C6', category: 'frontend' },
-  { name: 'Next.js', icon: SiNextdotjs, level: 88, color: '#FFFFFF', category: 'frontend' },
-  { name: 'Tailwind CSS', icon: SiTailwindcss, level: 92, color: '#06B6D4', category: 'frontend' },
-  { name: 'JavaScript', icon: SiJavascript, level: 95, color: '#F7DF1E', category: 'frontend' },
-  { name: 'Vue.js', icon: SiVuedotjs, level: 75, color: '#4FC08D', category: 'frontend' },
-  { name: 'Node.js', icon: SiNodedotjs, level: 88, color: '#339933', category: 'backend' },
-  { name: 'Python', icon: SiPython, level: 82, color: '#3776AB', category: 'backend' },
-  { name: 'PostgreSQL', icon: SiPostgresql, level: 85, color: '#4169E1', category: 'backend' },
-  { name: 'MongoDB', icon: SiMongodb, level: 80, color: '#47A248', category: 'backend' },
-  { name: 'GraphQL', icon: SiGraphql, level: 78, color: '#E10098', category: 'backend' },
-  { name: 'Redis', icon: SiRedis, level: 72, color: '#DC382D', category: 'backend' },
-  { name: 'Docker', icon: SiDocker, level: 75, color: '#2496ED', category: 'tools' },
-  { name: 'Git', icon: SiGit, level: 90, color: '#F05032', category: 'tools' },
-  { name: 'AWS', icon: SiAmazon, level: 70, color: '#FF9900', category: 'tools' },
-  { name: 'Figma', icon: SiFigma, level: 85, color: '#F24E1E', category: 'tools' },
+  { name: 'Python', icon: SiPython as any, level: 75, color: '#3776AB', category: 'backend' },
+  { name: 'C', icon: SiC as any, level: 70, color: '#6EA2D9', category: 'backend' },
+  { name: 'SQL', icon: SiPostgresql as any, level: 65, color: '#4169E1', category: 'backend' },
+  { name: 'HTML', icon: SiHtml5 as any, level: 60, color: '#E34F26', category: 'frontend' },
+  { name: 'JavaScript', icon: SiJavascript as any, level: 60, color: '#F7DF1E', category: 'frontend' },
 ];
 
 const categories = [

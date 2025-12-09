@@ -16,73 +16,19 @@ interface Project {
   category: string;
 }
 
-// todo: remove mock functionality
+// Single project per user request: Library Management System (Under Development)
 const projects: Project[] = [
   {
-    id: '1',
-    title: 'AI-Powered Analytics Dashboard',
-    description: 'Real-time data visualization with machine learning insights',
-    longDescription: 'A comprehensive analytics platform that leverages machine learning to provide actionable insights from complex datasets.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop',
-    technologies: ['React', 'TypeScript', 'Python', 'TensorFlow', 'PostgreSQL'],
+    id: 'lms',
+    title: 'Library Management System (Under Development)',
+    description: 'A library management system currently under development to manage books, borrowers, and transactions.',
+    longDescription: 'Developing a Library Management System to handle book inventory, member records, issue/return transactions, search, and reporting. The project focuses on robust data storage, simple UI, and clear workflows for small institutions; currently in active development.',
+    image: '',
+    technologies: ['Python', 'SQLite'],
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/Ankitkr2801',
     featured: true,
-    category: 'Full Stack',
-  },
-  {
-    id: '2',
-    title: 'E-Commerce Platform',
-    description: 'Scalable online marketplace with payment integration',
-    longDescription: 'A full-featured e-commerce solution with inventory management, payment processing, and real-time order tracking.',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop',
-    technologies: ['Next.js', 'Stripe', 'MongoDB', 'Redis', 'AWS'],
-    liveUrl: '#',
-    githubUrl: '#',
-    featured: true,
-    category: 'E-Commerce',
-  },
-  {
-    id: '3',
-    title: 'Social Media App',
-    description: 'Real-time messaging and content sharing platform',
-    longDescription: 'A modern social platform featuring real-time chat, story sharing, and content discovery algorithms.',
-    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=500&fit=crop',
-    technologies: ['React Native', 'Firebase', 'Node.js', 'GraphQL'],
-    liveUrl: '#',
-    githubUrl: '#',
-    category: 'Mobile',
-  },
-  {
-    id: '4',
-    title: 'DevOps Automation Suite',
-    description: 'CI/CD pipeline management and infrastructure monitoring',
-    longDescription: 'Enterprise-grade DevOps tooling for automated deployments, monitoring, and infrastructure management.',
-    image: 'https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&h=500&fit=crop',
-    technologies: ['Docker', 'Kubernetes', 'Terraform', 'Go', 'Prometheus'],
-    githubUrl: '#',
-    category: 'DevOps',
-  },
-  {
-    id: '5',
-    title: '3D Product Configurator',
-    description: 'Interactive WebGL product customization experience',
-    longDescription: 'An immersive 3D product configurator allowing customers to customize and visualize products in real-time.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop',
-    technologies: ['Three.js', 'React', 'WebGL', 'Blender'],
-    liveUrl: '#',
-    githubUrl: '#',
-    category: 'Creative',
-  },
-  {
-    id: '6',
-    title: 'Blockchain Voting System',
-    description: 'Secure and transparent decentralized voting platform',
-    longDescription: 'A blockchain-based voting system ensuring transparency, security, and immutability of electoral processes.',
-    image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=500&fit=crop',
-    technologies: ['Solidity', 'Ethereum', 'React', 'Web3.js'],
-    githubUrl: '#',
-    category: 'Blockchain',
+    category: 'Academic',
   },
 ];
 
@@ -131,11 +77,15 @@ function ProjectCard({ project, index }: ProjectCardProps) {
         <div 
           className={`absolute inset-0 transition-transform duration-500 ${isFlipped ? 'opacity-0' : 'opacity-100'}`}
         >
-          <img
-            src={project.image}
-            alt={project.title}
-            className="absolute inset-0 w-full h-full object-cover"
-          />
+          {project.image ? (
+            <img
+              src={project.image}
+              alt={project.title}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          ) : (
+            <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-neon-purple/10 to-neon-cyan/10" />
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
           
           <div className="absolute bottom-0 left-0 right-0 p-6">

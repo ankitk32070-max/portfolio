@@ -20,17 +20,15 @@ interface SocialLink {
 }
 
 const contactInfo: ContactInfo = {
-  email: 'hello@developer.com',
-  location: 'San Francisco, CA',
-  phone: '+1 (555) 123-4567',
-  availability: 'Available for freelance & full-time opportunities',
+  email: 'ankitkumar857993@gmail.com',
+  location: 'Jhajha, Bihar, India',
+  phone: '7004984231',
+  availability: 'Open to internships and entry-level opportunities',
 };
 
 const socialLinks: SocialLink[] = [
-  { platform: 'GitHub', url: 'https://github.com', icon: Github, color: '#9D4EDD' },
-  { platform: 'LinkedIn', url: 'https://linkedin.com', icon: Linkedin, color: '#00D9FF' },
-  { platform: 'Twitter', url: 'https://twitter.com', icon: Twitter, color: '#FF006E' },
-  { platform: 'Discord', url: '#', icon: MessageCircle, color: '#39FF14' },
+  { platform: 'GitHub', url: 'https://github.com/Ankitkr2801', icon: Github, color: '#181717' },
+  { platform: 'LinkedIn', url: 'https://www.linkedin.com/in/ankit-kumar-098a57323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', icon: Linkedin, color: '#0A66C2' },
 ];
 
 export default function ContactSection() {

@@ -14,66 +14,17 @@ interface Experience {
   companyUrl?: string;
 }
 
-// todo: remove mock functionality
+// Single entry: Fresher (as requested)
 const experiences: Experience[] = [
   {
-    id: '1',
-    company: 'Tech Innovators Inc.',
-    role: 'Senior Full Stack Developer',
-    duration: 'Jan 2023 - Present',
-    location: 'San Francisco, CA (Remote)',
-    description: 'Leading development of enterprise-scale applications and mentoring junior developers.',
-    achievements: [
-      'Architected microservices handling 1M+ daily requests',
-      'Reduced deployment time by 60% with CI/CD improvements',
-      'Led team of 5 developers on major product launch',
-    ],
-    technologies: ['React', 'Node.js', 'AWS', 'PostgreSQL', 'Docker'],
-    companyUrl: '#',
-  },
-  {
-    id: '2',
-    company: 'StartupXYZ',
-    role: 'Full Stack Developer',
-    duration: 'Mar 2021 - Dec 2022',
-    location: 'New York, NY',
-    description: 'Built and scaled core product features from ground up in a fast-paced startup environment.',
-    achievements: [
-      'Developed real-time collaboration feature used by 50K+ users',
-      'Implemented payment system processing $2M+ monthly',
-      'Optimized database queries reducing load times by 40%',
-    ],
-    technologies: ['Vue.js', 'Python', 'MongoDB', 'Redis', 'Stripe'],
-    companyUrl: '#',
-  },
-  {
-    id: '3',
-    company: 'Digital Agency Pro',
-    role: 'Frontend Developer',
-    duration: 'Jun 2019 - Feb 2021',
-    location: 'Los Angeles, CA',
-    description: 'Created responsive web applications and interactive experiences for diverse clients.',
-    achievements: [
-      'Delivered 20+ client projects with 98% satisfaction rate',
-      'Pioneered adoption of modern frontend frameworks',
-      'Built reusable component library used across projects',
-    ],
-    technologies: ['React', 'TypeScript', 'SCSS', 'Three.js', 'GSAP'],
-    companyUrl: '#',
-  },
-  {
-    id: '4',
-    company: 'Freelance',
-    role: 'Web Developer',
-    duration: 'Jan 2018 - May 2019',
-    location: 'Remote',
-    description: 'Provided web development services to small businesses and startups.',
-    achievements: [
-      'Completed 30+ projects across various industries',
-      'Built e-commerce sites generating $100K+ revenue',
-      'Maintained 5-star rating on freelance platforms',
-    ],
-    technologies: ['JavaScript', 'PHP', 'WordPress', 'MySQL', 'CSS'],
+    id: 'fresher',
+    company: 'Fresher',
+    role: 'Fresher',
+    duration: 'Available',
+    location: 'Jhajha, Bihar, India',
+    description: 'Final-year BCA student seeking internship or entry-level opportunities in software development. Strong fundamentals in Python, C, and SQL.',
+    achievements: [],
+    technologies: ['Python', 'C', 'SQL', 'HTML', 'JavaScript'],
   },
 ];
 
@@ -125,7 +76,11 @@ function TimelineItem({ experience, index, isVisible }: TimelineItemProps) {
             </div>
             <Badge className="bg-neon-purple/20 text-neon-purple border-neon-purple/30 shrink-0">
               <Briefcase className="w-3 h-3 mr-1" />
-              {experience.role.includes('Senior') ? 'Senior' : 'Mid-Level'}
+              {experience.role.includes('Senior')
+                ? 'Senior'
+                : experience.role.toLowerCase().includes('fresher')
+                ? 'Fresher'
+                : 'Mid-Level'}
             </Badge>
           </div>
 

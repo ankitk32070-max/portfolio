@@ -25,7 +25,7 @@ export default function Footer() {
             <span className="text-muted-foreground text-sm">
               &copy; {currentYear} 
               <span className="mx-1 bg-gradient-to-r from-neon-purple to-neon-cyan bg-clip-text text-transparent font-semibold">
-                Developer
+                Ankit Kumar
               </span>
               All rights reserved.
             </span>
